@@ -1,4 +1,4 @@
-path = "sameamount10.txt"
+path = "odd.txt"
 
 with open(path,'r') as arq:
 
@@ -24,8 +24,6 @@ with open(path,'r') as arq:
         deffaultCommands = f"""0 * * l 0\n0 _ {wall} r {newInitalState}\n* {wall} * r *"""
 
         newCommands.insert(0, deffaultCommands)
-        with open(arq.name.split('.')[0] + ".out", 'w') as arq:
-            arq.write("\n".join(newCommands))
     
     else:
         
@@ -95,5 +93,5 @@ n2 1 0 r {initialState}1"""
         newCommands.insert(-1, allCommands)
         newCommands.insert(-1, commandsComeToEnd)
         
-        with open(arq.name.split('.')[0] + ".out", 'w') as arq:
-            arq.write("\n".join(newCommands))
+    with open(arq.name.split('.')[0] + ".out", 'w') as arq:
+        arq.write("\n".join(newCommands))
